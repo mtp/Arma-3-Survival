@@ -341,8 +341,8 @@ A_SECTION_HEADER(Respawn);
 class BLWK_numRespawnTickets
 {
 	title = "Respawn Tickets";
-	values[] = {0, 5, 10, 15, 20};
-	texts[] = {"0", "5", "10", "15", "20"};
+	values[] = {0, 5, 10, 15, 20, 999};
+	texts[] = {"0", "5", "10", "15", "20", "Infinite"};
 	GET_DEFAULT_PARAM(BLWK_numRespawnTickets,10)
 };
 
@@ -352,6 +352,13 @@ class BLWK_saveRespawnLoadout
 	values[] = ZERO_OR_ONE;
 	texts[] = OFF_OR_ON;
 	GET_DEFAULT_PARAM(BLWK_saveRespawnLoadout,0)
+};
+class BLWK_pointsForHealEditable
+{
+	title = "Cost to heal players from the crate";
+	values[] = {0, 500, 1000, 2000, 9999};
+	texts[] = {"0", "500", "1000", "2000", "Dynamic"};
+	GET_DEFAULT_PARAM(BLWK_pointsForHealEditable,500)
 };
 
 
@@ -369,7 +376,7 @@ class BLWK_friendlyFaction
 	title = "Friendly Faction";
 	values[] = {FACTION_COUNT};
 	texts[] = {FACTION_STRINGS};
-	default = 0; // NATO
+	default = 140; // NATO
 };
 
 class BLWK_level1Faction
@@ -377,7 +384,7 @@ class BLWK_level1Faction
 	title = "Level 1 Enemy Faction";
 	values[] = {FACTION_COUNT};
 	texts[] = {FACTION_STRINGS};
-	default = 2; // FIA
+	default = 140; // FIA
 };
 
 class BLWK_level2Faction
@@ -385,7 +392,7 @@ class BLWK_level2Faction
 	title = "Level 2 Enemy Faction";
 	values[] = {FACTION_COUNT};
 	texts[] = {FACTION_STRINGS};
-	default = 1; // AAF
+	default = 140; // AAF
 };
 
 class BLWK_level3Faction
@@ -393,7 +400,7 @@ class BLWK_level3Faction
 	title = "Level 3 Enemy Faction";
 	values[] = {FACTION_COUNT};
 	texts[] = {FACTION_STRINGS};
-	default = 3; // CSAT
+	default = 140; // CSAT
 };
 
 class BLWK_level4Faction
@@ -401,7 +408,7 @@ class BLWK_level4Faction
 	title = "Level 4 Enemy Faction";
 	values[] = {FACTION_COUNT};
 	texts[] = {FACTION_STRINGS};
-	default = 4; // CSAT Urban
+	default = 140; // CSAT Urban
 };
 
 class BLWK_level5Faction
@@ -409,7 +416,7 @@ class BLWK_level5Faction
 	title = "Level 5 Enemy Faction";
 	values[] = {FACTION_COUNT};
 	texts[] = {FACTION_STRINGS};
-	default = 13; // Contact Spetsnaz 
+	default = 140; // Contact Spetsnaz 
 };
 
 
